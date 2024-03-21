@@ -4,16 +4,16 @@ import FirstPage from 'pages/FirstPage/FirstPage';
 import SecondPage from 'pages/SecondPage/SecondPage';
 import HalfPage from 'pages/HalfPage/HalfPage';
 import ErrorPage from 'pages/ErrorPage/ErrorPage';
-import { AppWrapper } from './App.styled';
+import { Suspense, lazy } from 'react';
 
-const test = import.meta.env.VITE_API_TEST;
+const HomePage = lazy(() => import('../src/pages/HomePage/HomePage'));
 
 function App() {
-  console.log(test);
   return (
-    <AppWrapper>
+    <Suspense fallback={<p>Loading...</p>}>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
+          <Route index element={<HomePage />} />
           <Route path="/first" element={<FirstPage />} />
           <Route path="/second" element={<SecondPage />}>
             <Route path=":half" element={<HalfPage />} />
@@ -21,7 +21,7 @@ function App() {
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
-    </AppWrapper>
+    </Suspense>
   );
 }
 export default App;
