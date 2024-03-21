@@ -13,7 +13,7 @@ export const HomeComponent = () => {
         <Container>
           <TitleWrapper>
             <MainTitle>The best way to rent an campers here</MainTitle>
-            <StyledLink to="/first">Go to campers</StyledLink>
+            <StyledLink to="/catalog">Find campers</StyledLink>
           </TitleWrapper>
         </Container>
       </SectionHome>
