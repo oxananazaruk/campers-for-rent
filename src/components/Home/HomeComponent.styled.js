@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import image from '../../../public/img/featured-min.jpg';
-import { theme } from '../../vars.js';
 import { Link } from 'react-router-dom';
 
 export const SectionHome = styled.section`
@@ -36,7 +35,7 @@ export const MainTitle = styled.h1`
   font-size: 54px;
   line-height: 1.05;
   letter-spacing: 0.01em;
-  color: ${theme.color.blockzFeatures};
+  color: ${(p) => p.theme.color.blockFeatures};
   width: 550px;
 `;
 
@@ -45,8 +44,20 @@ export const StyledLink = styled(Link)`
   font-size: 24px;
   line-height: 1.05;
   letter-spacing: 0.01em;
-  color: ${theme.color.blockzFeatures};
-  border: ${theme.border.red};
+  color: ${(p) => p.theme.color.blockFeatures};
+  border: ${(p) => p.theme.border.red};
   border-radius: 10px;
   padding: 17px 18px;
+
+  /* &:hover {
+    border: '1px solid #d84343';
+  } */
+  &:hover,
+  &:focus {
+    text-shadow:
+      0 0 5px #d84343,
+      0 0 10px #d84343,
+      0 0 20px #d84343,
+      0 0 40px #d84343;
+  }
 `;

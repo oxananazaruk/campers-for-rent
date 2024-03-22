@@ -1,4 +1,4 @@
-import { Container, Title } from './CatalogPage.styled';
+import { Container } from './CatalogPage.styled';
 import { useEffect } from 'react';
 import { fetchAdverts } from '../../redux/operations';
 import { useDispatch, useSelector } from 'react-redux';
@@ -15,7 +15,6 @@ const CatalogPage = () => {
 
   return (
     <Container>
-      <Title>First Page</Title>
       {adverts.length > 0 && <AdvertsList items={adverts} />}
     </Container>
   );

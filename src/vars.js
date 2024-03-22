@@ -4,7 +4,7 @@ export const theme = {
     text: '#475467',
     buttons: '#E44848',
     rating: '#FFC531',
-    blockzFeatures: '#F2F4F7',
+    blockFeatures: '#F2F4F7',
     inputs: '#F7F7F7',
   },
   border: {
