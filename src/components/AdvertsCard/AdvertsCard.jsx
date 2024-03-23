@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import sprite from '../../../public/sprite.svg';
 import { FeaturesList } from '../FeaturesList/FeaturesList';
 import {
@@ -19,7 +19,8 @@ import {
   TitlePrice,
 } from './AdvertsCard.styled';
 import { addFavorites, removeFavorites } from '../../redux/favoritesSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectFavorites } from '../../redux/selectors';
 
 export const AdvertsCard = ({ item }) => {
   const {
@@ -46,6 +47,13 @@ export const AdvertsCard = ({ item }) => {
 
   const formatPrice = price.toFixed(2);
   const [isFavorite, setIsFavorite] = useState(false);
+  const favorites = useSelector(selectFavorites);
+
+  useEffect(() => {
+    if (favorites.some((fav) => fav._id === item._id)) {
+      setIsFavorite(true);
+    }
+  }, [favorites, item._id]);
 
   const iconHeart = isFavorite ? 'heardPressed' : 'heartDefault';
 

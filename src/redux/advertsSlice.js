@@ -3,11 +3,13 @@ import { fetchAdverts } from './operations';
 
 const handlePending = (state) => {
   state.isLoading = true;
+  state.message = null;
 };
 
 const handleRejected = (state, action) => {
   state.isLoading = false;
   state.error = action.payload;
+  state.message = null;
 };
 
 const advertsSlice = createSlice({
@@ -16,6 +18,7 @@ const advertsSlice = createSlice({
     items: [],
     isLoading: false,
     error: null,
+    message: null,
   },
   extraReducers: (builder) => {
     builder
@@ -23,7 +26,14 @@ const advertsSlice = createSlice({
       .addCase(fetchAdverts.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.items = [...state.items, ...action.payload];
+        if (action.payload.length === 0) {
+          state.message = 'Thats all adverts';
+        }
+        const idsToCheck = state.items.map((item) => item._id);
+        const filteredItems = action.payload.filter(
+          (item) => !idsToCheck.includes(item._id)
+        );
+        state.items = [...state.items, ...filteredItems];
       })
       .addCase(fetchAdverts.rejected, handleRejected);
   },

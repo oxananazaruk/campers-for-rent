@@ -1,20 +1,17 @@
-import { useSelector } from 'react-redux';
-import { selectFavorites } from '../../redux/selectors';
 import { AdvertsCard } from '../AdvertsCard/AdvertsCard';
+import { ListAdverts, ListWrapper } from './FavoritesComponent.styled';
 
-export const FavoritesComponent = () => {
-  const favorites = useSelector(selectFavorites);
-
+export const FavoritesComponent = ({ favorites }) => {
   return (
-    <div>
+    <ListWrapper>
       <h2>Your favorite adverts</h2>
-      <ul>
+      <ListAdverts>
         {favorites.map((item) => (
           <li key={item._id}>
             <AdvertsCard item={item} />
           </li>
         ))}
-      </ul>
-    </div>
+      </ListAdverts>
+    </ListWrapper>
   );
 };
