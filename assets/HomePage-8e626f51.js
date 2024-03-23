@@ -1,4 +1,4 @@
-import{s as r,L as o,j as e}from"./index-e0e5ea83.js";const n="/campers-for-rent/assets/featured-min-ca34c45c.jpg",i=r.section`
+import{s as n,L as r,j as e}from"./index-dcb8084b.js";const o="/campers-for-rent/assets/featured-min-ca34c45c.jpg",i=n.section`
   height: 100vh;
   width: 100%;
   padding-bottom: 44px;
@@ -6,28 +6,28 @@ import{s as r,L as o,j as e}from"./index-e0e5ea83.js";const n="/campers-for-rent
       rgba(46, 47, 66, 0.8),
       rgba(46, 47, 66, 0.8)
     ),
-    url(${n});
+    url(${o});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-`,a=r.div`
+`,a=n.div`
   width: 1280px;
   padding: 0 20px;
   margin: 0 auto;
-`,s=r.div`
+`,s=n.div`
   padding-top: 200px;
   display: flex;
   gap: 40px;
   align-items: center;
   justify-content: center;
-`,d=r.h1`
+`,c=n.h1`
   font-weight: 700;
   font-size: 54px;
   line-height: 1.05;
   letter-spacing: 0.01em;
   color: ${t=>t.theme.color.blockFeatures};
   width: 550px;
-`,c=r(o)`
+`,d=n(r)`
   font-weight: 400;
   font-size: 24px;
   line-height: 1.05;
@@ -37,9 +37,6 @@ import{s as r,L as o,j as e}from"./index-e0e5ea83.js";const n="/campers-for-rent
   border-radius: 10px;
   padding: 17px 18px;
 
-  /* &:hover {
-    border: '1px solid #d84343';
-  } */
   &:hover,
   &:focus {
     text-shadow:
@@ -48,4 +45,4 @@ import{s as r,L as o,j as e}from"./index-e0e5ea83.js";const n="/campers-for-rent
       0 0 20px #d84343,
       0 0 40px #d84343;
   }
-`,p=()=>e.jsx(e.Fragment,{children:e.jsx(i,{children:e.jsx(a,{children:e.jsxs(s,{children:[e.jsx(d,{children:"The best way to rent an campers here"}),e.jsx(c,{to:"/catalog",children:"Find campers"})]})})})}),g=()=>e.jsx(p,{});export{g as default};
+`,p=()=>e.jsx(e.Fragment,{children:e.jsx(i,{children:e.jsx(a,{children:e.jsxs(s,{children:[e.jsx(c,{children:"The best way to rent an campers here"}),e.jsx(d,{to:"/catalog",children:"Find campers"})]})})})}),x=()=>e.jsx(p,{});export{x as default};
