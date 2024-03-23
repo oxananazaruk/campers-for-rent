@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import sprite from '../../../public/sprite.svg';
 import { FeaturesList } from '../FeaturesList/FeaturesList';
 import {
@@ -17,6 +18,8 @@ import {
   TitleName,
   TitlePrice,
 } from './AdvertsCard.styled';
+import { addFavorites, removeFavorites } from '../../redux/favoritesSlice';
+import { useDispatch } from 'react-redux';
 
 export const AdvertsCard = ({ item }) => {
   const {
@@ -39,7 +42,21 @@ export const AdvertsCard = ({ item }) => {
     reviews,
   } = item;
 
+  const dispatch = useDispatch();
+
   const formatPrice = price.toFixed(2);
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  const iconHeart = isFavorite ? 'heardPressed' : 'heartDefault';
+
+  const handleSelectFavorite = () => {
+    setIsFavorite(!isFavorite);
+    if (!isFavorite) {
+      dispatch(addFavorites(item));
+    } else {
+      dispatch(removeFavorites(item._id));
+    }
+  };
 
   return (
     <AdvertWrapper>
@@ -52,9 +69,9 @@ export const AdvertsCard = ({ item }) => {
           <TitleName>{name}</TitleName>
           <BtnWrapper>
             <TitlePrice>€{formatPrice}</TitlePrice>
-            <FavBtn type="button">
+            <FavBtn type="button" onClick={handleSelectFavorite}>
               <IconBtn>
-                <use href={`${sprite}#heartDefault`} />
+                <use href={`${sprite}#${iconHeart}`} />
               </IconBtn>
             </FavBtn>
           </BtnWrapper>

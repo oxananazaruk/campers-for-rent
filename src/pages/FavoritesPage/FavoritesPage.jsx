@@ -1,12 +1,10 @@
-import { Container, Block, Title, StyledLink } from './FavoritesPage.styled';
+import { FavoritesComponent } from '../../components/FavoritesComponent/FavoritesComponent';
+import { Container } from './FavoritesPage.styled';
 
 const SecondPage = () => {
   return (
     <Container>
-      <Block>
-        <Title>Second Page</Title>
-        <StyledLink to="/second/5">Half</StyledLink>
-      </Block>
+      <FavoritesComponent />
     </Container>
   );
 };

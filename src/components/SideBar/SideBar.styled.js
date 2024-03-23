@@ -43,6 +43,7 @@ export const IconFilter = styled.svg`
   top: 17px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
 `;
 
 export const ChekboxWrapp = styled.div`
@@ -69,8 +70,9 @@ export const ChekboxItem = styled.li`
 export const CastomChekbox = styled.label`
   border: ${(p) => p.theme.border.grey};
   border-radius: 10px;
-  padding: 17px 27px;
-  width: 113px;
+  padding: 9px 18px;
+  min-width: 100px;
+  max-width: 128px;
   height: 95px;
   font-weight: 500;
   font-size: 16px;
@@ -78,6 +80,8 @@ export const CastomChekbox = styled.label`
   text-align: center;
   cursor: pointer;
   display: block;
+  position: relative;
+  z-index: 2;
 `;
 
 export const ChekboxInp = styled.input`
@@ -93,13 +97,25 @@ export const ChekboxInp = styled.input`
 export const TextChekbox = styled.p`
   display: block;
   margin-top: 40px;
+  white-space: pre-wrap;
 `;
 
 export const RodioBtnWrapp = styled.div`
   margin-top: 32px;
 `;
 
+export const IconType = styled.svg`
+  width: 40px;
+  height: 28px;
+  position: absolute;
+  top: 17px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+`;
+
 export const SearchBtn = styled.button`
+  margin-top: 80px;
   border: none;
   border-radius: 200px;
   padding: 16px 60px;

@@ -8,6 +8,7 @@ import {
   FiltersBar,
   IconFilter,
   IconInput,
+  IconType,
   LocationLabel,
   Locationinput,
   RodioBtnWrapp,
@@ -117,6 +118,50 @@ export const SideBar = () => {
 
           <RodioBtnWrapp>
             <SideTitle>Vehicle type</SideTitle>
+            <ChekboxList>
+              <ChekboxItem>
+                <IconType>
+                  <use href={`${sprite}#camper3`} />
+                </IconType>
+                <ChekboxInp type="radio" name="type" value="van" id="van" />
+                <CastomChekbox htmlFor="van" className="castomChekbox">
+                  <TextChekbox>Van</TextChekbox>
+                </CastomChekbox>
+              </ChekboxItem>
+
+              <ChekboxItem>
+                <IconType>
+                  <use href={`${sprite}#camper2`} />
+                </IconType>
+                <ChekboxInp
+                  type="radio"
+                  name="type"
+                  value="fully integrated"
+                  id="fullyIntegrated"
+                />
+                <CastomChekbox
+                  htmlFor="fullyIntegrated"
+                  className="castomChekbox"
+                >
+                  <TextChekbox>Fully Integrated</TextChekbox>
+                </CastomChekbox>
+              </ChekboxItem>
+
+              <ChekboxItem>
+                <IconType>
+                  <use href={`${sprite}#camper`} />
+                </IconType>
+                <ChekboxInp
+                  type="radio"
+                  name="type"
+                  value="alcove"
+                  id="alcove"
+                />
+                <CastomChekbox htmlFor="alcove" className="castomChekbox">
+                  <TextChekbox>Alcove</TextChekbox>
+                </CastomChekbox>
+              </ChekboxItem>
+            </ChekboxList>
           </RodioBtnWrapp>
         </div>
 
