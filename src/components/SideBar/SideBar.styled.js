@@ -50,6 +50,31 @@ export const SideTitle = styled.h3`
   line-height: 120%;
   margin-bottom: 48px;
 `;
+export const ChekboxList = styled.div`
+  display: flex;
+  row-gap: 8px;
+  column-gap: 10px;
+  flex-wrap: wrap;
+`;
+
+export const CastomChekbox = styled.div`
+  border: ${(p) => p.theme.border.grey};
+  border-radius: 10px;
+  padding: 17px 27px;
+  width: 113px;
+  height: 95px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+`;
+
+export const ChekboxText = styled.p`
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+`;
 
 export const RodioBtnWrapp = styled.div`
   margin-top: 32px;

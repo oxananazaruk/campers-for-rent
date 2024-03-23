@@ -1,5 +1,8 @@
 import sprite from '../../../public/sprite.svg';
 import {
+  CastomChekbox,
+  ChekboxList,
+  ChekboxText,
   ChekboxWrapp,
   FiltersBar,
   IconFilter,
@@ -29,30 +32,43 @@ export const SideBar = () => {
           <SideText>Filters</SideText>
           <ChekboxWrapp>
             <SideTitle>Vehicle equipment</SideTitle>
-
-            <label>
-              <input type="checkbox" name="equipment" value="ac" />
-              <IconFilter>
-                <use xlinkHref={`${sprite}#ac`} />
-              </IconFilter>
-              AC
-            </label>
-            <label>
-              <input type="checkbox" name="equipment" value="automatic" />
-              Automatic
-            </label>
-            <label>
-              <input type="checkbox" name="equipment" value="kitchen" />
-              Kitchen
-            </label>
-            <label>
-              <input type="checkbox" name="equipment" value="tv" />
-              TV
-            </label>
-            <label>
-              <input type="checkbox" name="equipment" value="shower/WC" />
-              Shower/WC
-            </label>
+            <ChekboxList>
+              <CastomChekbox>
+                <IconFilter>
+                  <use xlinkHref={`${sprite}#ac`} />
+                </IconFilter>
+                <ChekboxText>AC</ChekboxText>
+                <input type="checkbox" name="equipment" value="ac" />
+              </CastomChekbox>
+              <CastomChekbox>
+                <IconFilter>
+                  <use xlinkHref={`${sprite}#automatic`} />
+                </IconFilter>
+                <ChekboxText>Automatic</ChekboxText>
+                <input type="checkbox" name="equipment" value="automatic" />
+              </CastomChekbox>
+              <CastomChekbox>
+                <IconFilter>
+                  <use xlinkHref={`${sprite}#knife`} />
+                </IconFilter>
+                <ChekboxText>Kitchen</ChekboxText>
+                <input type="checkbox" name="equipment" value="kitchen" />
+              </CastomChekbox>
+              <CastomChekbox>
+                <IconFilter>
+                  <use xlinkHref={`${sprite}#tv`} />
+                </IconFilter>
+                <ChekboxText>TV</ChekboxText>
+                <input type="checkbox" name="equipment" value="tv" />
+              </CastomChekbox>
+              <CastomChekbox>
+                <IconFilter>
+                  <use xlinkHref={`${sprite}#shower`} />
+                </IconFilter>
+                <ChekboxText>Shower/WC</ChekboxText>
+                <input type="checkbox" name="equipment" value="shower/WC" />
+              </CastomChekbox>
+            </ChekboxList>
           </ChekboxWrapp>
 
           <RodioBtnWrapp>
