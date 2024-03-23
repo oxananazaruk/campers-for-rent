@@ -1,4 +1,4 @@
-import{s as n,L as r,j as e}from"./index-7370f056.js";const o="/campers-for-rent/assets/featured-min-ca34c45c.jpg",i=n.section`
+import{s as n,L as r,j as e}from"./index-889f1ab2.js";const o="/campers-for-rent/assets/featured-min-ca34c45c.jpg",i=n.section`
   height: 100vh;
   width: 100%;
   padding-bottom: 44px;
