@@ -26,6 +26,7 @@ export const Locationinput = styled.input`
   margin-top: 8px;
   margin-bottom: 32px;
 `;
+
 export const IconInput = styled.svg`
   width: 18px;
   height: 20px;
@@ -38,6 +39,10 @@ export const IconInput = styled.svg`
 export const IconFilter = styled.svg`
   width: 32px;
   height: 32px;
+  position: absolute;
+  top: 17px;
+  left: 50%;
+  transform: translateX(-50%);
 `;
 
 export const ChekboxWrapp = styled.div`
@@ -50,14 +55,18 @@ export const SideTitle = styled.h3`
   line-height: 120%;
   margin-bottom: 48px;
 `;
-export const ChekboxList = styled.div`
+export const ChekboxList = styled.ul`
   display: flex;
   row-gap: 8px;
   column-gap: 10px;
   flex-wrap: wrap;
 `;
 
-export const CastomChekbox = styled.div`
+export const ChekboxItem = styled.li`
+  position: relative;
+`;
+
+export const CastomChekbox = styled.label`
   border: ${(p) => p.theme.border.grey};
   border-radius: 10px;
   padding: 17px 27px;
@@ -67,15 +76,43 @@ export const CastomChekbox = styled.div`
   font-size: 16px;
   line-height: 1.25;
   text-align: center;
+  cursor: pointer;
+  display: block;
 `;
 
-export const ChekboxText = styled.p`
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.25;
-  text-align: center;
+export const ChekboxInp = styled.input`
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  &:checked + .castomChekbox {
+    border: ${(p) => p.theme.border.red};
+  }
+`;
+
+export const TextChekbox = styled.p`
+  display: block;
+  margin-top: 40px;
 `;
 
 export const RodioBtnWrapp = styled.div`
   margin-top: 32px;
+`;
+
+export const SearchBtn = styled.button`
+  border: none;
+  border-radius: 200px;
+  padding: 16px 60px;
+  width: 173px;
+  height: 56px;
+  background-color: ${(p) => p.theme.color.buttons};
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  &:hover,
+  &:focus {
+    background-color: #d84343;
+  }
 `;

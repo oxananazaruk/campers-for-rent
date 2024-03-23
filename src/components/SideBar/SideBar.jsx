@@ -1,8 +1,9 @@
 import sprite from '../../../public/sprite.svg';
 import {
   CastomChekbox,
+  ChekboxInp,
+  ChekboxItem,
   ChekboxList,
-  ChekboxText,
   ChekboxWrapp,
   FiltersBar,
   IconFilter,
@@ -10,8 +11,10 @@ import {
   LocationLabel,
   Locationinput,
   RodioBtnWrapp,
+  SearchBtn,
   SideText,
   SideTitle,
+  TextChekbox,
 } from './SideBar.styled';
 
 export const SideBar = () => {
@@ -33,41 +36,82 @@ export const SideBar = () => {
           <ChekboxWrapp>
             <SideTitle>Vehicle equipment</SideTitle>
             <ChekboxList>
-              <CastomChekbox>
+              <ChekboxItem>
                 <IconFilter>
-                  <use xlinkHref={`${sprite}#ac`} />
+                  <use href={`${sprite}#ac`} />
                 </IconFilter>
-                <ChekboxText>AC</ChekboxText>
-                <input type="checkbox" name="equipment" value="ac" />
-              </CastomChekbox>
-              <CastomChekbox>
+                <ChekboxInp
+                  type="checkbox"
+                  name="equipment"
+                  value="ac"
+                  id="ac"
+                />
+                <CastomChekbox htmlFor="ac" className="castomChekbox">
+                  <TextChekbox>AC</TextChekbox>
+                </CastomChekbox>
+              </ChekboxItem>
+
+              <ChekboxItem>
                 <IconFilter>
-                  <use xlinkHref={`${sprite}#automatic`} />
+                  <use href={`${sprite}#automatic`} />
                 </IconFilter>
-                <ChekboxText>Automatic</ChekboxText>
-                <input type="checkbox" name="equipment" value="automatic" />
-              </CastomChekbox>
-              <CastomChekbox>
+                <ChekboxInp
+                  type="checkbox"
+                  name="equipment"
+                  value="automatic"
+                  id="automatic"
+                />
+                <CastomChekbox htmlFor="automatic" className="castomChekbox">
+                  <TextChekbox>Automatic</TextChekbox>
+                </CastomChekbox>
+              </ChekboxItem>
+
+              <ChekboxItem>
                 <IconFilter>
-                  <use xlinkHref={`${sprite}#knife`} />
+                  <use href={`${sprite}#knife`} />
                 </IconFilter>
-                <ChekboxText>Kitchen</ChekboxText>
-                <input type="checkbox" name="equipment" value="kitchen" />
-              </CastomChekbox>
-              <CastomChekbox>
+                <ChekboxInp
+                  type="checkbox"
+                  name="equipment"
+                  value="kitchen"
+                  id="kitchen"
+                />
+                <CastomChekbox htmlFor="kitchen" className="castomChekbox">
+                  <TextChekbox>Kitchen</TextChekbox>
+                </CastomChekbox>
+              </ChekboxItem>
+
+              <ChekboxItem>
                 <IconFilter>
-                  <use xlinkHref={`${sprite}#tv`} />
+                  <use href={`${sprite}#tv`} />
                 </IconFilter>
-                <ChekboxText>TV</ChekboxText>
-                <input type="checkbox" name="equipment" value="tv" />
-              </CastomChekbox>
-              <CastomChekbox>
+
+                <ChekboxInp
+                  type="checkbox"
+                  name="equipment"
+                  value="tv"
+                  id="tv"
+                />
+                <CastomChekbox htmlFor="tv" className="castomChekbox">
+                  <TextChekbox>TV</TextChekbox>
+                </CastomChekbox>
+              </ChekboxItem>
+
+              <ChekboxItem>
                 <IconFilter>
-                  <use xlinkHref={`${sprite}#shower`} />
+                  <use href={`${sprite}#shower`} />
                 </IconFilter>
-                <ChekboxText>Shower/WC</ChekboxText>
-                <input type="checkbox" name="equipment" value="shower/WC" />
-              </CastomChekbox>
+
+                <ChekboxInp
+                  type="checkbox"
+                  name="equipment"
+                  value="shower/WC"
+                  id="shower"
+                />
+                <CastomChekbox htmlFor="shower" className="castomChekbox">
+                  <TextChekbox>Shower/WC</TextChekbox>
+                </CastomChekbox>
+              </ChekboxItem>
             </ChekboxList>
           </ChekboxWrapp>
 
@@ -76,7 +120,7 @@ export const SideBar = () => {
           </RodioBtnWrapp>
         </div>
 
-        <button>Search</button>
+        <SearchBtn>Search</SearchBtn>
       </form>
     </FiltersBar>
   );
