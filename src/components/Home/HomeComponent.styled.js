@@ -49,9 +49,6 @@ export const StyledLink = styled(Link)`
   border-radius: 10px;
   padding: 17px 18px;
 
-  /* &:hover {
-    border: '1px solid #d84343';
-  } */
   &:hover,
   &:focus {
     text-shadow:

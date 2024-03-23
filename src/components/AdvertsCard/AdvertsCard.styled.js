@@ -112,7 +112,8 @@ export const BtnMore = styled.button`
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.01em;
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #d84343;
   }
 `;

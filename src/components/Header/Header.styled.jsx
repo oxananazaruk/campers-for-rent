@@ -1,40 +1,38 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
   padding: 20px;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
 
-  transform: translateX(100%);
+  transform: translateX(-50%);
 `;
 
 export const Navigation = styled.nav`
   display: flex;
+  gap: 20px;
   justify-content: center;
   align-items: center;
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled(NavLink)`
   padding: 8px 16px;
-  color: #ffffff;
-  text-shadow:
-    0 0 5px #00baff,
-    0 0 10px #00baff,
-    0 0 20px #00baff,
-    0 0 40px #00baff,
-    0 0 80px #00baff;
+  color: ${(p) => p.theme.color.main};
+  border: none;
   transition:
     color 0.3s,
-    text-shadow 0.3s;
+    border-bottom 0.3s;
 
   &:hover,
   &:focus {
-    text-shadow:
-      0 0 5px #d84343,
-      0 0 10px #d84343,
-      0 0 20px #d84343,
-      0 0 40px #d84343;
+    color: ${(p) => p.theme.color.buttons};
+    border-bottom: ${(p) => p.theme.border.red};
+  }
+
+  &.active {
+    color: ${(p) => p.theme.color.buttons};
+    border-bottom: ${(p) => p.theme.border.red};
   }
 `;
