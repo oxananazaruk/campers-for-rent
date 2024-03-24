@@ -12,15 +12,22 @@ export const HeaderContainer = styled.div`
 
 export const Navigation = styled.nav`
   display: flex;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
   align-items: center;
 `;
 
 export const StyledLink = styled(NavLink)`
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
   padding: 8px 16px;
+  min-width: 132px;
   color: ${(p) => p.theme.color.main};
   border: none;
+  border-radius: 12px;
+  background-color: rgba(242, 244, 247, 0.5);
   transition:
     color 0.3s,
     border-bottom 0.3s;

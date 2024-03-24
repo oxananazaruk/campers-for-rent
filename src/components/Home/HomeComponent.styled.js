@@ -25,7 +25,7 @@ export const Container = styled.div`
 export const TitleWrapper = styled.div`
   padding-top: 200px;
   display: flex;
-  gap: 40px;
+  gap: 80px;
   align-items: center;
   justify-content: center;
 `;
@@ -36,6 +36,19 @@ export const MainTitle = styled.h1`
   line-height: 1.05;
   letter-spacing: 0.01em;
   color: ${(p) => p.theme.color.blockFeatures};
+  width: 550px;
+`;
+
+export const MainText = styled.p`
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  color: ${(p) => p.theme.color.inputs};
   width: 550px;
 `;
 
