@@ -1,4 +1,4 @@
-import{u as n,j as e,a as i}from"./index-46905e35.js";import{A as o,n as r,g as a}from"./AdvertsCard-46c1da2e.js";const d=n.div`
+import{u as n,j as e,a as i}from"./index-671d8c7b.js";import{A as o,n as r,g as a}from"./AdvertsCard-7c0b5d56.js";const d=n.div`
   display: flex;
   flex-direction: column;
   align-items: center;

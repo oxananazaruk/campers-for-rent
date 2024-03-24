@@ -1,4 +1,4 @@
-import{u as s,a as p,j as e,r as j,b as q,f as T,c as E}from"./index-46905e35.js";import{n as b,s as N,A as V,F as w,a as W,b as B,c as r,d as P,e as M,f as O}from"./AdvertsCard-46c1da2e.js";const K=b.div`
+import{u as s,a as p,j as e,r as j,b as q,f as T,c as E}from"./index-671d8c7b.js";import{n as b,s as N,A as V,F as w,a as W,b as B,c as r,d as P,e as M,f as O}from"./AdvertsCard-7c0b5d56.js";const K=b.div`
   width: 1280px;
   padding: 0 20px;
   margin: 0 auto;
