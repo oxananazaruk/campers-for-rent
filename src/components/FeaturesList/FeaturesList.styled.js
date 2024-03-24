@@ -14,7 +14,7 @@ export const ListItem = styled.li`
   align-items: center;
   border-radius: 100px;
   padding: 12px 18px;
-  width: 126px;
+  max-width: 187px;
   height: 44px;
   background-color: ${(p) => p.theme.color.blockFeatures};
 `;

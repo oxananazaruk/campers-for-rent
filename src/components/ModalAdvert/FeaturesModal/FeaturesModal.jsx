@@ -60,7 +60,8 @@ export const FeaturesModal = ({ item }) => {
           </IconFeatures>
           <ListText>{details.beds} beds</ListText>
         </ListItem>
-        {details.airConditioner > 0 && (
+
+        {details?.airConditioner > 0 && (
           <ListItem>
             <IconFeatures>
               <use xlinkHref={`${sprite}#ac`} />
@@ -69,16 +70,16 @@ export const FeaturesModal = ({ item }) => {
           </ListItem>
         )}
 
-        {details.airConditioner > 0 && (
+        {details?.airConditioner > 0 && (
           <ListItem>
             <IconFeatures>
-              <use xlinkHref={`${sprite}#air-conditioner`} />
+              <use xlinkHref={`${sprite}#conditioner`} />
             </IconFeatures>
             <ListText>air conditioner</ListText>
           </ListItem>
         )}
 
-        {details.CD > 0 && (
+        {details?.CD > 0 && (
           <ListItem>
             <IconFeatures>
               <use xlinkHref={`${sprite}#cd`} />
@@ -87,7 +88,7 @@ export const FeaturesModal = ({ item }) => {
           </ListItem>
         )}
 
-        {details.radio > 0 && (
+        {details?.radio > 0 && (
           <ListItem>
             <IconFeatures>
               <use xlinkHref={`${sprite}#radio`} />
@@ -96,12 +97,57 @@ export const FeaturesModal = ({ item }) => {
           </ListItem>
         )}
 
-        {details.hob > 0 && (
+        {details?.hob > 0 && (
           <ListItem>
             <IconFeatures>
               <use xlinkHref={`${sprite}#hob`} />
             </IconFeatures>
             <ListText>{details.hob} hob</ListText>
+          </ListItem>
+        )}
+
+        {details?.toilet > 0 && (
+          <ListItem>
+            <IconFeatures>
+              <use xlinkHref={`${sprite}#toilet`} />
+            </IconFeatures>
+            <ListText> Toilet</ListText>
+          </ListItem>
+        )}
+
+        {details?.freezer > 0 && (
+          <ListItem>
+            <IconFeatures>
+              <use xlinkHref={`${sprite}#freezer`} />
+            </IconFeatures>
+            <ListText>Freezer</ListText>
+          </ListItem>
+        )}
+
+        {details?.microwave > 0 && (
+          <ListItem>
+            <IconFeatures>
+              <use xlinkHref={`${sprite}#microwave`} />
+            </IconFeatures>
+            <ListText>Microwave</ListText>
+          </ListItem>
+        )}
+
+        {details?.gas && (
+          <ListItem>
+            <IconFeatures>
+              <use xlinkHref={`${sprite}#gas`} />
+            </IconFeatures>
+            <ListText>{details.gas} gas</ListText>
+          </ListItem>
+        )}
+
+        {details?.water && (
+          <ListItem>
+            <IconFeatures>
+              <use xlinkHref={`${sprite}#water`} />
+            </IconFeatures>
+            <ListText>{details.water} water</ListText>
           </ListItem>
         )}
       </ListFeatures>
