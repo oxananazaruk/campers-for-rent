@@ -86,3 +86,12 @@ export const DetailsWrapp = styled.div`
   display: flex;
   gap: 16px;
 `;
+
+export const OrderWrapp = styled.div`
+  margin: 0 auto;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+`;

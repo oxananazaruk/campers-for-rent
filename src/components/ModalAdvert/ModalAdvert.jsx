@@ -18,6 +18,7 @@ import {
   ModalCloseBtn,
   ModalSvg,
   ModalWrapp,
+  OrderWrapp,
   StyledFeatures,
   StyledReviews,
 } from './ModalAdvert.styled';
@@ -54,6 +55,9 @@ export const ModalAdvert = ({ isOpen, onClose, item }) => {
   const [isFeatures, setIsFeatures] = useState(false);
   const [isReviews, setIsReviews] = useState(false);
 
+  const [isOrder, setIsOrder] = useState(false);
+  const [order, setOrder] = useState(null);
+
   const handleSelectFeatures = () => {
     setIsFeatures(true);
     setIsReviews(false);
@@ -62,6 +66,10 @@ export const ModalAdvert = ({ isOpen, onClose, item }) => {
   const handleSelectReviews = () => {
     setIsReviews(true);
     setIsFeatures(false);
+  };
+  const handleSubmit = (values) => {
+    setIsOrder(true);
+    setOrder(values);
   };
 
   return (
@@ -77,53 +85,75 @@ export const ModalAdvert = ({ isOpen, onClose, item }) => {
             <use href={`${sprite}#x`} />
           </ModalSvg>
         </ModalCloseBtn>
-        <TitleName>{name}</TitleName>
-        <InfoWrapp>
-          <RatingText>
-            <IconSvg>
-              <use href={`${sprite}#star`} />
-            </IconSvg>
-            {rating} ({reviews.length} Reviews)
-          </RatingText>
 
-          <LocationText>
-            <IconSvg>
-              <use href={`${sprite}#map-pin`} />
-            </IconSvg>
-            {location}
-          </LocationText>
-        </InfoWrapp>
-        <TitlePrice>€{price.toFixed(2)}</TitlePrice>
-        <ImgList>
-          {gallery.map((image, index) => (
-            <li key={index}>
-              <AdvertImg>
-                <StyledImg src={image} alt={name} />
-              </AdvertImg>
-            </li>
-          ))}
-        </ImgList>
-        <Descr>{description}</Descr>
-        <LinkList>
-          <li>
-            <StyledFeatures
-              $isFeatures={isFeatures}
-              onClick={handleSelectFeatures}
-            >
-              Features
-            </StyledFeatures>
-          </li>
-          <li>
-            <StyledReviews $isReviews={isReviews} onClick={handleSelectReviews}>
-              Reviews
-            </StyledReviews>
-          </li>
-        </LinkList>
-        <DetailsWrapp>
-          {isFeatures && <FeaturesModal item={item} />}
-          {isReviews && <ReviewsModal reviews={reviews} />}
-          {(isReviews || isFeatures) && <FormModal />}
-        </DetailsWrapp>
+        {!isOrder && (
+          <>
+            <TitleName>{name}</TitleName>
+            <InfoWrapp>
+              <RatingText>
+                <IconSvg>
+                  <use href={`${sprite}#star`} />
+                </IconSvg>
+                {rating} ({reviews.length} Reviews)
+              </RatingText>
+
+              <LocationText>
+                <IconSvg>
+                  <use href={`${sprite}#map-pin`} />
+                </IconSvg>
+                {location}
+              </LocationText>
+            </InfoWrapp>
+            <TitlePrice>€{price.toFixed(2)}</TitlePrice>
+            <ImgList>
+              {gallery.map((image, index) => (
+                <li key={index}>
+                  <AdvertImg>
+                    <StyledImg src={image} alt={name} />
+                  </AdvertImg>
+                </li>
+              ))}
+            </ImgList>
+            <Descr>{description}</Descr>
+            <LinkList>
+              <li>
+                <StyledFeatures
+                  $isFeatures={isFeatures}
+                  onClick={handleSelectFeatures}
+                >
+                  Features
+                </StyledFeatures>
+              </li>
+              <li>
+                <StyledReviews
+                  $isReviews={isReviews}
+                  onClick={handleSelectReviews}
+                >
+                  Reviews
+                </StyledReviews>
+              </li>
+            </LinkList>
+            <DetailsWrapp>
+              {isFeatures && <FeaturesModal item={item} />}
+              {isReviews && <ReviewsModal reviews={reviews} />}
+              {(isReviews || isFeatures) && (
+                <FormModal handleSubmit={handleSubmit} />
+              )}
+            </DetailsWrapp>
+          </>
+        )}
+
+        {isOrder && (
+          <OrderWrapp>
+            <h2>Thank you for your order! We will contact you shortly.</h2>
+            <p>
+              Your ordered {name} for {order.date}
+            </p>
+            <AdvertImg>
+              <StyledImg src={gallery[0]} alt={name} />
+            </AdvertImg>
+          </OrderWrapp>
+        )}
       </ModalWrapp>
     </ReactModal>
   );
