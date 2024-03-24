@@ -11,6 +11,7 @@ import {
 } from '../AdvertsCard/AdvertsCard.styled';
 import {
   Descr,
+  DetailsWrapp,
   ImgList,
   InfoWrapp,
   LinkList,
@@ -29,6 +30,7 @@ const customStyles = {
   overlay: {
     backgroundColor: 'rgba(17, 18, 19, 0.4)',
     zIndex: 100,
+    overflowY: 'scroll',
   },
   content: {
     top: '50%',
@@ -135,9 +137,11 @@ export const ModalAdvert = ({ isOpen, onClose, item }) => {
             </StyledReviews>
           </li>
         </LinkList>
-        {isFeatures && <FeaturesModal item={item} />}
-        {isReviews && <ReviewsModal item={item} />}
-        {(isReviews || isFeatures) && <FormModal />}
+        <DetailsWrapp>
+          {isFeatures && <FeaturesModal item={item} />}
+          {isReviews && <ReviewsModal item={item} />}
+          {(isReviews || isFeatures) && <FormModal />}
+        </DetailsWrapp>
       </ModalWrapp>
     </ReactModal>
   );

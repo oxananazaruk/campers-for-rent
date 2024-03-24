@@ -5,11 +5,14 @@ export const ListWrapp = styled.div`
   margin-top: 44px;
 `;
 
-export const ListFeatures = styled.ul`
+export const DetailsItem = styled.li`
   display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: 24px;
-  width: 430px;
+  justify-content: space-between;
+`;
+
+export const FeaturesText = styled.p`
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
+  text-align: center;
 `;

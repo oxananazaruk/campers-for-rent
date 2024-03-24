@@ -5,10 +5,21 @@ import {
   ListText,
 } from '../../FeaturesList/FeaturesList.styled';
 import sprite from '../../../../public/sprite.svg';
-import { ListWrapp } from './FeaturesModal.styled';
+import { DetailsItem, FeaturesText, ListWrapp } from './FeaturesModal.styled';
 
 export const FeaturesModal = ({ item }) => {
-  const { adults, engine, transmission, details } = item;
+  const {
+    adults,
+    engine,
+    transmission,
+    details,
+    form,
+    length,
+    width,
+    height,
+    tank,
+    consumption,
+  } = item;
 
   return (
     <ListWrapp>
@@ -94,6 +105,34 @@ export const FeaturesModal = ({ item }) => {
           </ListItem>
         )}
       </ListFeatures>
+
+      <h3>Vehicle details</h3>
+      <ul>
+        <DetailsItem>
+          <FeaturesText>Form</FeaturesText>
+          <FeaturesText>{form}</FeaturesText>
+        </DetailsItem>
+        <DetailsItem>
+          <FeaturesText>Length</FeaturesText>
+          <FeaturesText>{length}</FeaturesText>
+        </DetailsItem>
+        <DetailsItem>
+          <FeaturesText>Width</FeaturesText>
+          <FeaturesText>{width}</FeaturesText>
+        </DetailsItem>
+        <DetailsItem>
+          <FeaturesText>Height</FeaturesText>
+          <FeaturesText>{height}</FeaturesText>
+        </DetailsItem>
+        <DetailsItem>
+          <FeaturesText>Tank</FeaturesText>
+          <FeaturesText>{tank}</FeaturesText>
+        </DetailsItem>
+        <DetailsItem>
+          <FeaturesText>Consumption</FeaturesText>
+          <FeaturesText>{consumption}</FeaturesText>
+        </DetailsItem>
+      </ul>
     </ListWrapp>
   );
 };

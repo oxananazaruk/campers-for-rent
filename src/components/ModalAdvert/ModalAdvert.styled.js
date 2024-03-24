@@ -81,3 +81,8 @@ export const StyledReviews = styled.p`
   padding-bottom: 24px;
   border-bottom: ${getBorderReviews};
 `;
+
+export const DetailsWrapp = styled.div`
+  display: flex;
+  gap: 16px;
+`;
