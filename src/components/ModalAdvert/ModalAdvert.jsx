@@ -31,7 +31,6 @@ const customStyles = {
   overlay: {
     backgroundColor: 'rgba(17, 18, 19, 0.4)',
     zIndex: 100,
-    overflowY: 'scroll',
   },
   content: {
     top: '50%',
@@ -43,7 +42,10 @@ const customStyles = {
     padding: 40,
     borderRadius: '20px',
     minWidth: '982px',
-    minHeight: '720px',
+    maxHeight: '850px',
+    overflowY: 'scroll',
+    scrollbarWidth: 'thin',
+    scrollbarColor: 'darkgray lightgray',
   },
 };
 
@@ -77,7 +79,7 @@ export const ModalAdvert = ({ isOpen, onClose, item }) => {
       isOpen={isOpen}
       onRequestClose={onClose}
       style={customStyles}
-      contentLabel=""
+      autoFocus={true}
     >
       <ModalWrapp>
         <ModalCloseBtn onClick={onClose}>

@@ -5,7 +5,13 @@ import {
   ListText,
 } from '../../FeaturesList/FeaturesList.styled';
 import sprite from '../../../../public/sprite.svg';
-import { DetailsItem, FeaturesText, ListWrapp } from './FeaturesModal.styled';
+import {
+  DetailsItem,
+  DetailsList,
+  DetailsTitle,
+  FeaturesText,
+  ListWrapp,
+} from './FeaturesModal.styled';
 
 export const FeaturesModal = ({ item }) => {
   const {
@@ -152,8 +158,8 @@ export const FeaturesModal = ({ item }) => {
         )}
       </ListFeatures>
 
-      <h3>Vehicle details</h3>
-      <ul>
+      <DetailsTitle>Vehicle details</DetailsTitle>
+      <DetailsList>
         <DetailsItem>
           <FeaturesText>Form</FeaturesText>
           <FeaturesText>{form}</FeaturesText>
@@ -178,7 +184,7 @@ export const FeaturesModal = ({ item }) => {
           <FeaturesText>Consumption</FeaturesText>
           <FeaturesText>{consumption}</FeaturesText>
         </DetailsItem>
-      </ul>
+      </DetailsList>
     </ListWrapp>
   );
 };

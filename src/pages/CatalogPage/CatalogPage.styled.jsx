@@ -9,5 +9,12 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   gap: 64px;
-  /* justify-content: center; */
+`;
+
+export const QueryError = styled.h3`
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.25;
+  text-align: center;
+  padding-top: 200px;
 `;

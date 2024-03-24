@@ -24,6 +24,7 @@ export const StyledLink = styled(NavLink)`
   letter-spacing: 0.01em;
   padding: 8px 16px;
   min-width: 132px;
+  text-align: center;
   color: ${(p) => p.theme.color.main};
   border: none;
   border-radius: 12px;

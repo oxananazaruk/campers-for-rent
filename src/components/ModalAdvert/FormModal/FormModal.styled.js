@@ -6,7 +6,7 @@ export const StyledForm = styled(Form)`
   border-radius: 10px;
   padding: 24px;
   width: 448px;
-  height: 532px;
+  min-height: 532px;
 `;
 
 export const FormTitle = styled.h3`
@@ -50,7 +50,7 @@ export const StyledTextarea = styled(Field)`
   border: none;
   background-color: ${(p) => p.theme.color.inputs};
   color: rgba(16, 24, 40, 0.6);
-  resize:none;
+  resize: none;
 `;
 
 export const Error = styled(ErrorMessage)`

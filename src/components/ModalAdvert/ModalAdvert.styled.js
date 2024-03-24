@@ -48,13 +48,10 @@ export const ImgList = styled.ul`
 
 export const Descr = styled.p`
   color: ${(p) => p.theme.color.text};
-  overflow: hidden;
-  text-overflow: ellipsis;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   max-width: 902px;
-  height: 70px;
   margin-top: 24px;
   margin-bottom: 24px;
 `;
@@ -62,6 +59,8 @@ export const Descr = styled.p`
 export const LinkList = styled.ul`
   display: flex;
   gap: 40px;
+  border-bottom: ${(p) => p.theme.border.grey};
+  margin-bottom: 44px;
 `;
 
 export const StyledFeatures = styled.p`
@@ -71,6 +70,7 @@ export const StyledFeatures = styled.p`
   line-height: 1.2;
   padding-bottom: 24px;
   border-bottom: ${getBorderFeatures};
+  cursor: pointer;
 `;
 
 export const StyledReviews = styled.p`
@@ -80,6 +80,7 @@ export const StyledReviews = styled.p`
   line-height: 1.2;
   padding-bottom: 24px;
   border-bottom: ${getBorderReviews};
+  cursor: pointer;
 `;
 
 export const DetailsWrapp = styled.div`

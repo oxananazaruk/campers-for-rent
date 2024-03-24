@@ -1,3 +1,4 @@
+import { Field } from 'formik';
 import styled from 'styled-components';
 
 export const FiltersBar = styled.div`
@@ -16,7 +17,7 @@ export const LocationLabel = styled.label`
   position: relative;
 `;
 
-export const Locationinput = styled.input`
+export const Locationinput = styled(Field)`
   border: none;
   border-radius: 10px;
   padding: 18px 18px 18px 44px;
@@ -84,7 +85,7 @@ export const CastomChekbox = styled.label`
   z-index: 2;
 `;
 
-export const ChekboxInp = styled.input`
+export const ChekboxInp = styled(Field)`
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;

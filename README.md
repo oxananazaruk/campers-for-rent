@@ -2,12 +2,14 @@
 
 This project was created with the help of [Create Vite](https://vitejs.dev/).
 
+This application for a company that provides camper van rental services.
+
 ## About the project
 
 The app will help travelers explore the Campers models and find their travel
 home that meets all the requirements and fulfills all their travel dreams.
 
-The project consists of three pages: the Home page, the Catalog and the page
+TThe application consists of 3 pages: the Home page, the Catalog and the page
 with ads selected as favorites.
 
 ## Home page

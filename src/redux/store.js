@@ -13,13 +13,6 @@ import storage from 'redux-persist/lib/storage';
 import { advertsReducer } from './advertsSlice';
 import { favoritesReducer } from './favoritesSlice';
 
-// export const store = configureStore({
-//   reducer: {
-//     adverts: advertsReducer,
-//     favorites: favoritesReducer,
-//   },
-// });
-
 const rootReducer = combineReducers({
   adverts: advertsReducer,
   favorites: favoritesReducer,

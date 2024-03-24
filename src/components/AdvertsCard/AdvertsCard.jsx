@@ -98,6 +98,7 @@ export const AdvertsCard = ({ item }) => {
 
       {isModalOpen && (
         <ModalAdvert
+          key={item._id}
           isOpen={isModalOpen}
           onClose={() => setIsModal(false)}
           item={item}
