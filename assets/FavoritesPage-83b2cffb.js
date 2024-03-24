@@ -1,4 +1,4 @@
-import{u as n,j as e,a as i}from"./index-ca57c1c0.js";import{A as r,n as o,c as a}from"./AdvertsCard-2de2f938.js";const d=n.div`
+import{u as n,j as e,a as i}from"./index-46905e35.js";import{A as o,n as r,g as a}from"./AdvertsCard-46c1da2e.js";const d=n.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,7 +9,7 @@ import{u as n,j as e,a as i}from"./index-ca57c1c0.js";import{A as r,n as o,c as 
   gap: 32px;
   margin-bottom: 50px;
   padding-top: 20px;
-`,c=({favorites:t})=>e.jsxs(d,{children:[e.jsx("h2",{children:"Your favorite adverts"}),e.jsx(l,{children:t.map(s=>e.jsx("li",{children:e.jsx(r,{item:s})},s._id))})]}),p=o.div`
+`,c=({favorites:t})=>e.jsxs(d,{children:[e.jsx("h2",{children:"You liked these adverts"}),e.jsx(l,{children:t.map(s=>e.jsx("li",{children:e.jsx(o,{item:s})},s._id))})]}),p=r.div`
   display: flex;
   justify-content: center;
   align-items: center;
