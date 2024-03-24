@@ -49,25 +49,7 @@ const customStyles = {
 ReactModal.setAppElement('#root');
 
 export const ModalAdvert = ({ isOpen, onClose, item }) => {
-  const {
-    name,
-    price,
-    rating,
-    location,
-    // adults,
-    // children,
-    // engine,
-    // transmission,
-    // form,
-    // length,
-    // width,
-    // height,
-    // tank,
-    // consumption,
-    description,
-    gallery,
-    reviews,
-  } = item;
+  const { name, price, rating, location, description, gallery, reviews } = item;
 
   const [isFeatures, setIsFeatures] = useState(false);
   const [isReviews, setIsReviews] = useState(false);
