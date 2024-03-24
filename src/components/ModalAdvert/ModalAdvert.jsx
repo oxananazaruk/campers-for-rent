@@ -121,7 +121,7 @@ export const ModalAdvert = ({ isOpen, onClose, item }) => {
         </LinkList>
         <DetailsWrapp>
           {isFeatures && <FeaturesModal item={item} />}
-          {isReviews && <ReviewsModal item={item} />}
+          {isReviews && <ReviewsModal reviews={reviews} />}
           {(isReviews || isFeatures) && <FormModal />}
         </DetailsWrapp>
       </ModalWrapp>
