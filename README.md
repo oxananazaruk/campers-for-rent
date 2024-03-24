@@ -13,23 +13,24 @@ with ads selected as favorites.
 ## Home page
 
 The home page presents basic information about the company and the site
-navigation panel (./src/assets/homepage.jpg)
+navigation panel ![Home page](./src/assets/homepage.jpg)
 
 ## Catalog
 
-(./src/assets/catalog.jpg)
+![Catalog page](./src/assets/catalog.jpg)
 
 This page presents a list of ads containing information about the camper. When
 you click on the button with the image of a heart, the ad is added to the list
 of favorites. Clicking the Show more button opens a modal window with detailed
 information about the camper
 
-(./src/assets/modal.jpg)
+![Modal](./src/assets/modal.jpg)
 
 ## Favorites page
 
 This page contains a list of ads added to your favorites
-(./src/assets/favorites.jpg)
+
+![Favorites page](./src/assets/favorites.jpg)
 
 ## Technologies used:
 
