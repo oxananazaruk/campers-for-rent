@@ -1,5 +1,12 @@
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+
+const getBorderFeatures = (props) => {
+  return props.$isFeatures ? '5px solid #e44848' : 'none';
+};
+
+const getBorderReviews = (props) => {
+  return props.$isReviews ? '5px solid #e44848' : 'none';
+};
 
 export const ModalWrapp = styled.div`
   position: relative;
@@ -57,13 +64,20 @@ export const LinkList = styled.ul`
   gap: 40px;
 `;
 
-export const StyledLink = styled(NavLink)`
+export const StyledFeatures = styled.p`
   color: ${(p) => p.theme.color.main};
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
-  /* padding-bottom: 24px; */
-  &.active {
-    border-bottom: 5px solid #e44848;
-  }
+  padding-bottom: 24px;
+  border-bottom: ${getBorderFeatures};
+`;
+
+export const StyledReviews = styled.p`
+  color: ${(p) => p.theme.color.main};
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  padding-bottom: 24px;
+  border-bottom: ${getBorderReviews};
 `;

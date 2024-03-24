@@ -17,8 +17,13 @@ import {
   ModalCloseBtn,
   ModalSvg,
   ModalWrapp,
-  StyledLink,
+  StyledFeatures,
+  StyledReviews,
 } from './ModalAdvert.styled';
+import { useState } from 'react';
+import { FeaturesModal } from './FeaturesModal/FeaturesModal';
+import { ReviewsModal } from './ReviewsModal/ReviewsModal';
+import { FormModal } from './FormModal/FormModal';
 
 const customStyles = {
   overlay: {
@@ -32,8 +37,10 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    padding: 20,
+    padding: 40,
     borderRadius: '20px',
+    minWidth: '982px',
+    minHeight: '720px',
   },
 };
 
@@ -60,6 +67,19 @@ export const ModalAdvert = ({ isOpen, onClose, item }) => {
     reviews,
   } = item;
 
+  const [isFeatures, setIsFeatures] = useState(false);
+  const [isReviews, setIsReviews] = useState(false);
+
+  const handleSelectFeatures = () => {
+    setIsFeatures(true);
+    setIsReviews(false);
+  };
+
+  const handleSelectReviews = () => {
+    setIsReviews(true);
+    setIsFeatures(false);
+  };
+
   return (
     <ReactModal
       isOpen={isOpen}
@@ -73,9 +93,7 @@ export const ModalAdvert = ({ isOpen, onClose, item }) => {
             <use href={`${sprite}#x`} />
           </ModalSvg>
         </ModalCloseBtn>
-
         <TitleName>{name}</TitleName>
-
         <InfoWrapp>
           <RatingText>
             <IconSvg>
@@ -91,7 +109,6 @@ export const ModalAdvert = ({ isOpen, onClose, item }) => {
             {location}
           </LocationText>
         </InfoWrapp>
-
         <TitlePrice>€{price.toFixed(2)}</TitlePrice>
         <ImgList>
           {gallery.map((image, index) => (
@@ -102,17 +119,25 @@ export const ModalAdvert = ({ isOpen, onClose, item }) => {
             </li>
           ))}
         </ImgList>
-
         <Descr>{description}</Descr>
-
         <LinkList>
           <li>
-            <StyledLink>Features</StyledLink>
+            <StyledFeatures
+              $isFeatures={isFeatures}
+              onClick={handleSelectFeatures}
+            >
+              Features
+            </StyledFeatures>
           </li>
           <li>
-            <StyledLink>Reviews</StyledLink>
+            <StyledReviews $isReviews={isReviews} onClick={handleSelectReviews}>
+              Reviews
+            </StyledReviews>
           </li>
         </LinkList>
+        {isFeatures && <FeaturesModal item={item} />}
+        {isReviews && <ReviewsModal item={item} />}
+        {(isReviews || isFeatures) && <FormModal />}
       </ModalWrapp>
     </ReactModal>
   );
