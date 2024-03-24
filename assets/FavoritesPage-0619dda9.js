@@ -1,4 +1,4 @@
-import{s as n,j as e,u as i}from"./index-889f1ab2.js";import{A as r,n as o,c as a}from"./AdvertsCard-ea55ea85.js";const d=n.div`
+import{u as n,j as e,a as i}from"./index-c541b17d.js";import{A as r,n as o,c as a}from"./AdvertsCard-b5c04c6d.js";const d=n.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,4 +14,4 @@ import{s as n,j as e,u as i}from"./index-889f1ab2.js";import{A as r,n as o,c as 
   justify-content: center;
   align-items: center;
   padding-top: 100px;
-`,f=()=>{const t=i(a);return e.jsx(p,{children:t.length>0&&e.jsx(c,{favorites:t})})};export{f as default};
+`,u=()=>{const t=i(a);return e.jsx(p,{children:t.length>0&&e.jsx(c,{favorites:t})})};export{u as default};
