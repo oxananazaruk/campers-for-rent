@@ -59,7 +59,7 @@ const CatalogPage = () => {
         {visibleAdverts.length > 0 && (
           <AdvertsList items={visibleAdverts} onLoadMare={handleLoadMore} />
         )}
-        {visibleAdverts.length === 0 && (
+        {visibleAdverts.length === 0 && !isLoading && (
           <QueryError>
             There are no results matching your search query. Please try changing
             your search parameters!
