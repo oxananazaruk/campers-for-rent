@@ -10,12 +10,11 @@ import {
   InputsWrapp,
   StyledTextarea,
 } from './FormModal.styled';
+import { DatePick } from './DatePick';
 
 const schema = Yup.object().shape({
   name: Yup.string().min(3, 'Too short').required('Required'),
-  email: Yup.string()
-    .matches(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/, 'It must be valid email')
-    .required('Required'),
+  email: Yup.string().email('It must be valid email').required('Required'),
   date: Yup.date().required('Required'),
   comment: Yup.string(),
 });
@@ -54,6 +53,7 @@ export const FormModal = ({ handleSubmit }) => {
           <div>
             <StyledInput name="date" placeholder="Booking date" type="date" />
             <Error name="date" component="p" />
+            <DatePick />
           </div>
 
           <div>

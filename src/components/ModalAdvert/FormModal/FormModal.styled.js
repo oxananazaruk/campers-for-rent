@@ -1,4 +1,5 @@
 import { ErrorMessage, Field, Form } from 'formik';
+import DatePicker from 'react-datepicker';
 import styled from 'styled-components';
 
 export const StyledForm = styled(Form)`
@@ -85,4 +86,27 @@ export const StyledButton = styled.button`
   &:hover {
     background-color: #d84343;
   }
+`;
+
+export const StyledDatePicker = styled(DatePicker)`
+  display: block;
+  width: 398px;
+  height: 46px;
+  padding: 18px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  border-radius: 10px;
+  border: none;
+  background-color: ${(p) => p.theme.color.inputs};
+  color: rgba(16, 24, 40, 0.6);
+  position: relative;
+`;
+
+export const IconSvg = styled.svg`
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 18px;
 `;
