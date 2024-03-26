@@ -71,8 +71,8 @@ export const ChekboxItem = styled.li`
 export const CastomChekbox = styled.label`
   border: ${(p) => p.theme.border.grey};
   border-radius: 10px;
-  padding: 9px 18px;
-  min-width: 100px;
+  padding: 17px 12px;
+  min-width: 112px;
   max-width: 128px;
   height: 95px;
   font-weight: 500;
@@ -103,6 +103,23 @@ export const TextChekbox = styled.p`
 
 export const RodioBtnWrapp = styled.div`
   margin-top: 32px;
+`;
+
+export const CastomRodioBtn = styled.label`
+  border: ${(p) => p.theme.border.grey};
+  border-radius: 10px;
+  padding: 9px 24px;
+  min-width: 100px;
+  max-width: 128px;
+  height: 95px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  z-index: 2;
 `;
 
 export const IconType = styled.svg`

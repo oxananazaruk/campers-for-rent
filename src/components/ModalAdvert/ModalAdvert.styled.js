@@ -28,6 +28,11 @@ export const ModalCloseBtn = styled.button`
   padding: 0;
 `;
 
+export const ScrollWrapp = styled.div`
+ overflow-y: scroll;
+ 
+`;
+
 export const ModalSvg = styled.svg`
   width: 32px;
   height: 32px;

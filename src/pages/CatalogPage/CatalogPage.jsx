@@ -35,7 +35,9 @@ const CatalogPage = () => {
   const visibleAdverts = adverts.filter((item) => {
     const hasLocation =
       !filters.location ||
-      item.location.toLowerCase().includes(filters.location.toLowerCase());
+      item.location
+        .toLowerCase()
+        .includes(filters.location.toLowerCase().trim());
 
     const matchesType = !filters.type || item.form === filters.type;
 

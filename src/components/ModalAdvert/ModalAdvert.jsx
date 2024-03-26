@@ -19,6 +19,7 @@ import {
   ModalSvg,
   ModalWrapp,
   OrderWrapp,
+  ScrollWrapp,
   StyledFeatures,
   StyledReviews,
 } from './ModalAdvert.styled';
@@ -43,9 +44,9 @@ const customStyles = {
     borderRadius: '20px',
     minWidth: '982px',
     maxHeight: '850px',
-    overflowY: 'scroll',
-    scrollbarWidth: 'thin',
-    scrollbarColor: 'darkgray lightgray',
+    // overflowY: 'scroll',
+    // scrollbarWidth: 'thin',
+    // scrollbarColor: 'darkgray lightgray',
   },
 };
 
@@ -107,41 +108,44 @@ export const ModalAdvert = ({ isOpen, onClose, item }) => {
               </LocationText>
             </InfoWrapp>
             <TitlePrice>€{price.toFixed(2)}</TitlePrice>
-            <ImgList>
-              {gallery.map((image, index) => (
-                <li key={index}>
-                  <AdvertImg>
-                    <StyledImg src={image} alt={name} />
-                  </AdvertImg>
+
+            <ScrollWrapp>
+              <ImgList>
+                {gallery.map((image, index) => (
+                  <li key={index}>
+                    <AdvertImg>
+                      <StyledImg src={image} alt={name} />
+                    </AdvertImg>
+                  </li>
+                ))}
+              </ImgList>
+              <Descr>{description}</Descr>
+              <LinkList>
+                <li>
+                  <StyledFeatures
+                    $isFeatures={isFeatures}
+                    onClick={handleSelectFeatures}
+                  >
+                    Features
+                  </StyledFeatures>
                 </li>
-              ))}
-            </ImgList>
-            <Descr>{description}</Descr>
-            <LinkList>
-              <li>
-                <StyledFeatures
-                  $isFeatures={isFeatures}
-                  onClick={handleSelectFeatures}
-                >
-                  Features
-                </StyledFeatures>
-              </li>
-              <li>
-                <StyledReviews
-                  $isReviews={isReviews}
-                  onClick={handleSelectReviews}
-                >
-                  Reviews
-                </StyledReviews>
-              </li>
-            </LinkList>
-            <DetailsWrapp>
-              {isFeatures && <FeaturesModal item={item} />}
-              {isReviews && <ReviewsModal reviews={reviews} />}
-              {(isReviews || isFeatures) && (
-                <FormModal handleSubmit={handleSubmit} />
-              )}
-            </DetailsWrapp>
+                <li>
+                  <StyledReviews
+                    $isReviews={isReviews}
+                    onClick={handleSelectReviews}
+                  >
+                    Reviews
+                  </StyledReviews>
+                </li>
+              </LinkList>
+              <DetailsWrapp>
+                {isFeatures && <FeaturesModal item={item} />}
+                {isReviews && <ReviewsModal reviews={reviews} />}
+                {(isReviews || isFeatures) && (
+                  <FormModal handleSubmit={handleSubmit} />
+                )}
+              </DetailsWrapp>
+            </ScrollWrapp>
           </>
         )}
 

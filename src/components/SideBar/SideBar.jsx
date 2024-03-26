@@ -2,6 +2,7 @@ import sprite from '../../../public/sprite.svg';
 import { Form, Formik } from 'formik';
 import {
   CastomChekbox,
+  CastomRodioBtn,
   ChekboxInp,
   ChekboxItem,
   ChekboxList,
@@ -38,11 +39,7 @@ export const SideBar = ({ handleSubmit }) => {
           <div>
             <SideText>Location</SideText>
             <LocationLabel>
-              <Locationinput
-                type="text"
-                name="location"
-                placeholder="Kyiv, Ukraine"
-              />
+              <Locationinput type="text" name="location" placeholder="City" />
               <IconInput width="18" height="20">
                 <use href={`${sprite}#map-pin`} />
               </IconInput>
@@ -146,9 +143,9 @@ export const SideBar = ({ handleSubmit }) => {
                     value="panelTruck"
                     id="van"
                   />
-                  <CastomChekbox htmlFor="van" className="castomChekbox">
+                  <CastomRodioBtn htmlFor="van" className="castomChekbox">
                     <TextChekbox>Van</TextChekbox>
-                  </CastomChekbox>
+                  </CastomRodioBtn>
                 </ChekboxItem>
 
                 <ChekboxItem>
@@ -161,12 +158,12 @@ export const SideBar = ({ handleSubmit }) => {
                     value="fullyIntegrated"
                     id="fullyIntegrated"
                   />
-                  <CastomChekbox
+                  <CastomRodioBtn
                     htmlFor="fullyIntegrated"
                     className="castomChekbox"
                   >
                     <TextChekbox>Fully Integrated</TextChekbox>
-                  </CastomChekbox>
+                  </CastomRodioBtn>
                 </ChekboxItem>
 
                 <ChekboxItem>
@@ -179,9 +176,9 @@ export const SideBar = ({ handleSubmit }) => {
                     value="alcove"
                     id="alcove"
                   />
-                  <CastomChekbox htmlFor="alcove" className="castomChekbox">
+                  <CastomRodioBtn htmlFor="alcove" className="castomChekbox">
                     <TextChekbox>Alcove</TextChekbox>
-                  </CastomChekbox>
+                  </CastomRodioBtn>
                 </ChekboxItem>
               </ChekboxList>
             </RodioBtnWrapp>

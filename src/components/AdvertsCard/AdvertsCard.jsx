@@ -12,6 +12,7 @@ import {
   IconSvg,
   InfoWrapper,
   LocationText,
+  MainWrapp,
   PriceWrapper,
   RatingText,
   StyledImg,
@@ -57,7 +58,7 @@ export const AdvertsCard = ({ item }) => {
           <StyledImg src={gallery[0]} alt={name} />
         </AdvertImg>
 
-        <div>
+        <MainWrapp>
           <PriceWrapper>
             <TitleName>{name}</TitleName>
             <BtnWrapper>
@@ -93,7 +94,7 @@ export const AdvertsCard = ({ item }) => {
           <BtnMore type="button" onClick={() => setIsModal(true)}>
             Show more
           </BtnMore>
-        </div>
+        </MainWrapp>
       </AdvertWrapper>
 
       {isModalOpen && (

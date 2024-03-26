@@ -52,6 +52,10 @@ export const StyledImg = styled.img`
   object-fit: cover;
 `;
 
+export const MainWrapp = styled.div`
+  width: 526px;
+`;
+
 export const IconSvg = styled.svg`
   width: 16px;
   height: 16px;

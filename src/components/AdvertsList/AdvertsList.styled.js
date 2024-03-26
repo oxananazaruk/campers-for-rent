@@ -19,15 +19,15 @@ export const LoadBtn = styled.button`
   border: ${(p) => p.theme.border.grey};
   border-radius: 200px;
   padding: 16px 32px;
-  width: 145px;
+  min-width: 145px;
   height: 56px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.01em;
+  background-color: transparent;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border: ${(p) => p.theme.border.red};
   }
 `;
