@@ -25,10 +25,14 @@ export const FormText = styled.p`
   margin-bottom: 24px;
 `;
 
+export const InpWrapp = styled.div`
+  position: relative;
+`;
+
 export const StyledInput = styled(Field)`
   display: block;
   width: 100%;
-  height: 46px;
+  height: 56px;
   padding: 18px;
   font-weight: 400;
   font-size: 16px;
@@ -60,6 +64,19 @@ export const Error = styled(ErrorMessage)`
   line-height: 1.5;
   letter-spacing: 0.12px;
   margin: 4px;
+  position: absolute;
+  bottom: -40%;
+  right: 0;
+`;
+export const ErrorDate = styled.p`
+  color: ${(p) => p.theme.color.buttons};
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.12px;
+  margin: 4px;
+  position: absolute;
+  bottom: -40%;
+  right: 0;
 `;
 
 export const InputsWrapp = styled.div`
@@ -91,7 +108,7 @@ export const StyledButton = styled.button`
 export const StyledDatePicker = styled(DatePicker)`
   display: block;
   width: 398px;
-  height: 46px;
+  height: 56px;
   padding: 18px;
   font-weight: 400;
   font-size: 16px;
@@ -103,10 +120,11 @@ export const StyledDatePicker = styled(DatePicker)`
   position: relative;
 `;
 
-export const IconSvg = styled.svg`
+export const IconCalendar = styled.svg`
   width: 20px;
   height: 20px;
   position: absolute;
   top: 50%;
   right: 18px;
+  transform: translateY(-50%);
 `;

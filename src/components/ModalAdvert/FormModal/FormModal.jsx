@@ -9,6 +9,7 @@ import {
   FormText,
   InputsWrapp,
   StyledTextarea,
+  InpWrapp,
 } from './FormModal.styled';
 import { DatePick } from './DatePick';
 
@@ -23,7 +24,7 @@ export const FormModal = ({ handleSubmit }) => {
   const initialValues = {
     name: '',
     email: '',
-    date: '',
+    date: null,
     comment: '',
   };
 
@@ -32,7 +33,9 @@ export const FormModal = ({ handleSubmit }) => {
       initialValues={initialValues}
       validationSchema={schema}
       onSubmit={(values) => {
-        handleSubmit(values);
+        const formattedDate = new Date(values.date).toLocaleDateString('en-GB');
+        const updatedValues = { ...values, date: formattedDate };
+        handleSubmit(updatedValues);
       }}
     >
       <StyledForm autoComplete="off">
@@ -40,21 +43,19 @@ export const FormModal = ({ handleSubmit }) => {
         <FormText>Stay connected! We are always ready to help you.</FormText>
 
         <InputsWrapp>
-          <div>
+          <InpWrapp>
             <StyledInput type="text" name="name" placeholder="Name" />
             <Error name="name" component="p" />
-          </div>
+          </InpWrapp>
 
-          <div>
+          <InpWrapp>
             <StyledInput type="email" name="email" placeholder="Email" />
             <Error name="email" component="p" />
-          </div>
+          </InpWrapp>
 
-          <div>
-            <StyledInput name="date" placeholder="Booking date" type="date" />
-            <Error name="date" component="p" />
-            <DatePick />
-          </div>
+          <InpWrapp>
+            <DatePick name="date" />
+          </InpWrapp>
 
           <div>
             <StyledTextarea

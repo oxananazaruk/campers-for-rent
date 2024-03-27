@@ -8,7 +8,11 @@ const SecondPage = () => {
 
   return (
     <Container>
-      {favorites.length > 0 && <FavoritesComponent favorites={favorites} />}
+      {favorites.length > 0 ? (
+        <FavoritesComponent favorites={favorites} />
+      ) : (
+        <h2>There are no favorite adverts yet... </h2>
+      )}
     </Container>
   );
 };

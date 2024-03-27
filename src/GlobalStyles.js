@@ -3,6 +3,28 @@ import 'modern-normalize';
 import { theme } from './vars.js';
 
 export const GlobalStyle = createGlobalStyle`
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../public/fonts/Inter-Medium.ttf') format('ttf'); 
+  }
+  @font-face {
+    font-display: swap; 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../public/fonts/Inter-Regular.ttf') format('ttf'); 
+  }
+  @font-face {
+    font-display: swap; 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../public/fonts/Inter-SemiBold.ttf') format('ttf'); 
+  }
+
     body {
         margin: 0;
         font-family: "Inter", sans-serif;

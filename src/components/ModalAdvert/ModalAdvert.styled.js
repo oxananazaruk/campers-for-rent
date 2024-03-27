@@ -14,7 +14,6 @@ export const ModalWrapp = styled.div`
 
 export const ModalCloseBtn = styled.button`
   position: absolute;
-
   width: 32px;
   height: 32px;
   top: 14px;
@@ -28,9 +27,36 @@ export const ModalCloseBtn = styled.button`
   padding: 0;
 `;
 
+export const TitlePrice = styled.p`
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+  margin-bottom: 24px;
+`;
+
 export const ScrollWrapp = styled.div`
- overflow-y: scroll;
- 
+  overflow-y: scroll;
+  max-height: 530px;
+  padding-right: 10px;
+  @-moz-document url-prefix() {
+    scrollbar {
+      width: thin;
+      color: #d9d9d9;
+      background-color: transparent;
+    }
+  }
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 7px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #d9d9d9;
+    border-radius: 12px;
+    height: 264px;
+  }
 `;
 
 export const ModalSvg = styled.svg`
@@ -48,7 +74,6 @@ export const InfoWrapp = styled.div`
 export const ImgList = styled.ul`
   display: flex;
   gap: 16px;
-  margin-top: 24px;
 `;
 
 export const Descr = styled.p`

@@ -7,11 +7,11 @@ import {
   RatingText,
   StyledImg,
   TitleName,
-  TitlePrice,
 } from '../AdvertsCard/AdvertsCard.styled';
 import {
   Descr,
   DetailsWrapp,
+  TitlePrice,
   ImgList,
   InfoWrapp,
   LinkList,
@@ -40,13 +40,10 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    padding: 40,
+    padding: '40px 40px 40px 40px',
     borderRadius: '20px',
     minWidth: '982px',
     maxHeight: '850px',
-    // overflowY: 'scroll',
-    // scrollbarWidth: 'thin',
-    // scrollbarColor: 'darkgray lightgray',
   },
 };
 
@@ -55,7 +52,7 @@ ReactModal.setAppElement('#root');
 export const ModalAdvert = ({ isOpen, onClose, item }) => {
   const { name, price, rating, location, description, gallery, reviews } = item;
 
-  const [isFeatures, setIsFeatures] = useState(false);
+  const [isFeatures, setIsFeatures] = useState(true);
   const [isReviews, setIsReviews] = useState(false);
 
   const [isOrder, setIsOrder] = useState(false);
