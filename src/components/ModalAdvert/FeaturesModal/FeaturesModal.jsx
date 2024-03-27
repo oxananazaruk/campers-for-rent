@@ -84,7 +84,7 @@ export const FeaturesModal = ({ item }) => {
         {details?.airConditioner > 0 && (
           <ListItem>
             <IconFeatures>
-              <use xlinkHref={`${sprite}#ac`} />
+              <use xlinkHref={`${sprite}#airConditioner`} />
             </IconFeatures>
             <ListText>AC</ListText>
           </ListItem>

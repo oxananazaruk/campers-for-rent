@@ -29,7 +29,7 @@ export const SideBar = ({ handleSubmit }) => {
 
   const vehicleEquipment = [
     { equipment: 'airConditioner', text: 'AC' },
-    { equipment: 'automatic', text: 'Automati' },
+    { equipment: 'automatic', text: 'Automatic' },
     { equipment: 'kitchen', text: 'Kitchen' },
     { equipment: 'TV', text: 'TV' },
     { equipment: 'shower', text: 'Shower/WC' },
