@@ -7,8 +7,8 @@ export const SectionHome = styled.section`
   width: 100%;
   padding-bottom: 44px;
   background-image: linear-gradient(
-      rgba(46, 47, 66, 0.8),
-      rgba(46, 47, 66, 0.8)
+      rgba(16, 24, 40, 0.8),
+      rgba(16, 24, 40, 0.8)
     ),
     url(${image});
   background-repeat: no-repeat;
@@ -23,25 +23,22 @@ export const Container = styled.div`
 `;
 
 export const TitleWrapper = styled.div`
-  padding-top: 200px;
-  display: flex;
-  gap: 80px;
-  align-items: center;
-  justify-content: center;
+  padding-top: 150px;
 `;
 
 export const MainTitle = styled.h1`
-  font-weight: 700;
-  font-size: 54px;
+  display: block;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 64px;
   line-height: 1.05;
   letter-spacing: 0.01em;
   color: ${(p) => p.theme.color.blockFeatures};
-  width: 550px;
+  width: 800px;
 `;
 
 export const MainText = styled.p`
   display: block;
-  text-align: center;
   margin: 0 auto;
   margin-top: 50px;
   font-weight: 400;
@@ -49,10 +46,14 @@ export const MainText = styled.p`
   line-height: 1.05;
   letter-spacing: 0.01em;
   color: ${(p) => p.theme.color.inputs};
-  width: 550px;
+  width: 800px;
 `;
 
 export const StyledLink = styled(Link)`
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  text-align: center;
   font-weight: 400;
   font-size: 24px;
   line-height: 1.05;
@@ -61,6 +62,7 @@ export const StyledLink = styled(Link)`
   border: ${(p) => p.theme.border.red};
   border-radius: 10px;
   padding: 17px 18px;
+  margin-top: 50px;
 
   &:hover,
   &:focus {

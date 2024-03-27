@@ -12,7 +12,7 @@ export const ListAdverts = styled.ul`
   flex-direction: column;
   gap: 32px;
   margin-bottom: 50px;
-  padding-top: 100px;
+  padding-top: 50px;
 `;
 
 export const LoadBtn = styled.button`
