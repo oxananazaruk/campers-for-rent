@@ -69,7 +69,7 @@ Error generating stack: `+i.message+`
   top: 0;
   left: 0;
   position: sticky;
-  z-index: 1100;
+  z-index: 110;
   display: flex;
   min-height: 84px;
   padding: 24px;
@@ -99,8 +99,7 @@ Error generating stack: `+i.message+`
   min-width: 132px;
   text-align: center;
   color: #fff;
-  border: none;
-  border-radius: 12px;
+  border-bottom: 1px solid transparent;
   transition:
     color 0.3s,
     border-bottom 0.3s;
@@ -334,7 +333,7 @@ to {
   display: flex;
   align-items: center;
   justify-content: center;
-`,yw=()=>A.jsx(mw,{children:A.jsx(cw,{height:100,width:100,radius:5,color:"#E44848",ariaLabel:"ball-triangle-loading",wrapperClass:{},wrapperStyle:"",visible:!0})}),gw=()=>A.jsxs(A.Fragment,{children:[A.jsx(iw,{}),A.jsx(ow,{}),A.jsx("main",{children:A.jsx(R.Suspense,{fallback:A.jsx(yw,{}),children:A.jsx(jg,{})})})]}),Jf=R.lazy(()=>Va(()=>import("./HomePage-1f7bef30.js"),[])),vw=R.lazy(()=>Va(()=>import("./CatalogPage-7772d922.js"),["assets/CatalogPage-7772d922.js","assets/AdvertsCard-ae612fcd.js","assets/AdvertsCard-b8d97615.css"])),ww=R.lazy(()=>Va(()=>import("./FavoritesPage-d2d4d268.js"),["assets/FavoritesPage-d2d4d268.js","assets/AdvertsCard-ae612fcd.js","assets/AdvertsCard-b8d97615.css"]));function Sw(){return A.jsx(Ig,{children:A.jsxs($n,{path:"/",element:A.jsx(gw,{}),children:[A.jsx($n,{index:!0,element:A.jsx(Jf,{})}),A.jsx($n,{path:"/catalog",element:A.jsx(vw,{})}),A.jsx($n,{path:"/favorites",element:A.jsx(ww,{})}),A.jsx($n,{path:"*",element:A.jsx(Jf,{})})]})})}var Rm={exports:{}},Om={};/**
+`,yw=()=>A.jsx(mw,{children:A.jsx(cw,{height:100,width:100,radius:5,color:"#E44848",ariaLabel:"ball-triangle-loading",wrapperClass:{},wrapperStyle:"",visible:!0})}),gw=()=>A.jsxs(A.Fragment,{children:[A.jsx(iw,{}),A.jsx(ow,{}),A.jsx("main",{children:A.jsx(R.Suspense,{fallback:A.jsx(yw,{}),children:A.jsx(jg,{})})})]}),Jf=R.lazy(()=>Va(()=>import("./HomePage-4d2ae678.js"),[])),vw=R.lazy(()=>Va(()=>import("./CatalogPage-7d0c01de.js"),["assets/CatalogPage-7d0c01de.js","assets/AdvertsCard-8ab6ee95.js","assets/AdvertsCard-b8d97615.css"])),ww=R.lazy(()=>Va(()=>import("./FavoritesPage-ba62b00a.js"),["assets/FavoritesPage-ba62b00a.js","assets/AdvertsCard-8ab6ee95.js","assets/AdvertsCard-b8d97615.css"]));function Sw(){return A.jsx(Ig,{children:A.jsxs($n,{path:"/",element:A.jsx(gw,{}),children:[A.jsx($n,{index:!0,element:A.jsx(Jf,{})}),A.jsx($n,{path:"/catalog",element:A.jsx(vw,{})}),A.jsx($n,{path:"/favorites",element:A.jsx(ww,{})}),A.jsx($n,{path:"*",element:A.jsx(Jf,{})})]})})}var Rm={exports:{}},Om={};/**
  * @license React
  * use-sync-external-store-with-selector.production.min.js
  *
