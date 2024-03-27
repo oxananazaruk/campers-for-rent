@@ -27,6 +27,20 @@ export const SideBar = ({ handleSubmit }) => {
     type: '',
   };
 
+  const vehicleEquipment = [
+    { equipment: 'airConditioner', text: 'AC' },
+    { equipment: 'automatic', text: 'Automati' },
+    { equipment: 'kitchen', text: 'Kitchen' },
+    { equipment: 'TV', text: 'TV' },
+    { equipment: 'shower', text: 'Shower/WC' },
+  ];
+
+  const vehicleTypes = [
+    { type: 'panelTruck', text: 'Van' },
+    { type: 'fullyIntegrated', text: 'Fully Integrated' },
+    { type: 'alcove', text: 'Alcove' },
+  ];
+
   return (
     <FiltersBar>
       <Formik
@@ -51,135 +65,50 @@ export const SideBar = ({ handleSubmit }) => {
             <ChekboxWrapp>
               <SideTitle>Vehicle equipment</SideTitle>
               <ChekboxList>
-                <ChekboxItem>
-                  <IconFilter>
-                    <use href={`${sprite}#ac`} />
-                  </IconFilter>
-                  <ChekboxInp
-                    type="checkbox"
-                    name="equipment"
-                    value="airConditioner"
-                    id="ac"
-                  />
-                  <CastomChekbox htmlFor="ac" className="castomChekbox">
-                    <TextChekbox>AC</TextChekbox>
-                  </CastomChekbox>
-                </ChekboxItem>
-
-                <ChekboxItem>
-                  <IconFilter>
-                    <use href={`${sprite}#automatic`} />
-                  </IconFilter>
-                  <ChekboxInp
-                    type="checkbox"
-                    name="equipment"
-                    value="automatic"
-                    id="automatic"
-                  />
-                  <CastomChekbox htmlFor="automatic" className="castomChekbox">
-                    <TextChekbox>Automatic</TextChekbox>
-                  </CastomChekbox>
-                </ChekboxItem>
-
-                <ChekboxItem>
-                  <IconFilter>
-                    <use href={`${sprite}#knife`} />
-                  </IconFilter>
-                  <ChekboxInp
-                    type="checkbox"
-                    name="equipment"
-                    value="kitchen"
-                    id="kitchen"
-                  />
-                  <CastomChekbox htmlFor="kitchen" className="castomChekbox">
-                    <TextChekbox>Kitchen</TextChekbox>
-                  </CastomChekbox>
-                </ChekboxItem>
-
-                <ChekboxItem>
-                  <IconFilter>
-                    <use href={`${sprite}#tv`} />
-                  </IconFilter>
-
-                  <ChekboxInp
-                    type="checkbox"
-                    name="equipment"
-                    value="TV"
-                    id="tv"
-                  />
-                  <CastomChekbox htmlFor="tv" className="castomChekbox">
-                    <TextChekbox>TV</TextChekbox>
-                  </CastomChekbox>
-                </ChekboxItem>
-
-                <ChekboxItem>
-                  <IconFilter>
-                    <use href={`${sprite}#shower`} />
-                  </IconFilter>
-
-                  <ChekboxInp
-                    type="checkbox"
-                    name="equipment"
-                    value="shower"
-                    id="shower"
-                  />
-                  <CastomChekbox htmlFor="shower" className="castomChekbox">
-                    <TextChekbox>Shower/WC</TextChekbox>
-                  </CastomChekbox>
-                </ChekboxItem>
+                {vehicleEquipment.map((item) => (
+                  <ChekboxItem key={item.equipment}>
+                    <IconFilter>
+                      <use href={`${sprite}#${item.equipment}`} />
+                    </IconFilter>
+                    <ChekboxInp
+                      type="checkbox"
+                      name="equipment"
+                      value={item.equipment}
+                      id={item.equipment}
+                    />
+                    <CastomChekbox
+                      htmlFor={item.equipment}
+                      className="castomChekbox"
+                    >
+                      <TextChekbox>{item.text}</TextChekbox>
+                    </CastomChekbox>
+                  </ChekboxItem>
+                ))}
               </ChekboxList>
             </ChekboxWrapp>
 
             <RodioBtnWrapp>
               <SideTitle>Vehicle type</SideTitle>
               <ChekboxList>
-                <ChekboxItem>
-                  <IconType>
-                    <use href={`${sprite}#camper3`} />
-                  </IconType>
-                  <ChekboxInp
-                    type="radio"
-                    name="type"
-                    value="panelTruck"
-                    id="van"
-                  />
-                  <CastomRodioBtn htmlFor="van" className="castomChekbox">
-                    <TextChekbox>Van</TextChekbox>
-                  </CastomRodioBtn>
-                </ChekboxItem>
-
-                <ChekboxItem>
-                  <IconType>
-                    <use href={`${sprite}#camper2`} />
-                  </IconType>
-                  <ChekboxInp
-                    type="radio"
-                    name="type"
-                    value="fullyIntegrated"
-                    id="fullyIntegrated"
-                  />
-                  <CastomRodioBtn
-                    htmlFor="fullyIntegrated"
-                    className="castomChekbox"
-                  >
-                    <TextChekbox>Fully Integrated</TextChekbox>
-                  </CastomRodioBtn>
-                </ChekboxItem>
-
-                <ChekboxItem>
-                  <IconType>
-                    <use href={`${sprite}#camper`} />
-                  </IconType>
-                  <ChekboxInp
-                    type="radio"
-                    name="type"
-                    value="alcove"
-                    id="alcove"
-                  />
-                  <CastomRodioBtn htmlFor="alcove" className="castomChekbox">
-                    <TextChekbox>Alcove</TextChekbox>
-                  </CastomRodioBtn>
-                </ChekboxItem>
+                {vehicleTypes.map((item) => (
+                  <ChekboxItem key={item.type}>
+                    <IconType>
+                      <use href={`${sprite}#${item.type}`} />
+                    </IconType>
+                    <ChekboxInp
+                      type="radio"
+                      name="type"
+                      value={item.type}
+                      id={item.type}
+                    />
+                    <CastomRodioBtn
+                      htmlFor={item.type}
+                      className="castomChekbox"
+                    >
+                      <TextChekbox>{item.text}</TextChekbox>
+                    </CastomRodioBtn>
+                  </ChekboxItem>
+                ))}
               </ChekboxList>
             </RodioBtnWrapp>
           </div>

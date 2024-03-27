@@ -13,7 +13,7 @@ export const FeaturesList = ({ item }) => {
     <ListFeatures>
       <ListItem>
         <IconFeatures>
-          <use href={`${sprite}#users`} />
+          <use href={`${sprite}#adults`} />
         </IconFeatures>
         <ListText>{adults} adults</ListText>
       </ListItem>
@@ -36,17 +36,19 @@ export const FeaturesList = ({ item }) => {
       {details.kitchen > 0 && (
         <ListItem>
           <IconFeatures>
-            <use href={`${sprite}#knife`} />
+            <use href={`${sprite}#kitchen`} />
           </IconFeatures>
           <ListText>Kitchen</ListText>
         </ListItem>
       )}
-      <ListItem>
-        <IconFeatures>
-          <use href={`${sprite}#bad`} />
-        </IconFeatures>
-        <ListText>{details.beds} beds</ListText>
-      </ListItem>
+      {details.beds > 0 && (
+        <ListItem>
+          <IconFeatures>
+            <use href={`${sprite}#beds`} />
+          </IconFeatures>
+          <ListText>{details.beds} beds</ListText>
+        </ListItem>
+      )}
       {details.airConditioner > 0 && (
         <ListItem>
           <IconFeatures>

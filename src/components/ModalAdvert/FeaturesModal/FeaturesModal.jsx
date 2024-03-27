@@ -32,7 +32,7 @@ export const FeaturesModal = ({ item }) => {
       <ListFeatures>
         <ListItem>
           <IconFeatures>
-            <use href={`${sprite}#users`} />
+            <use href={`${sprite}#adults`} />
           </IconFeatures>
           <ListText>{adults} adults</ListText>
         </ListItem>
@@ -55,14 +55,14 @@ export const FeaturesModal = ({ item }) => {
         {details.kitchen > 0 && (
           <ListItem>
             <IconFeatures>
-              <use href={`${sprite}#knife`} />
+              <use href={`${sprite}#kitchen`} />
             </IconFeatures>
             <ListText>Kitchen</ListText>
           </ListItem>
         )}
         <ListItem>
           <IconFeatures>
-            <use href={`${sprite}#bad`} />
+            <use href={`${sprite}#beds`} />
           </IconFeatures>
           <ListText>{details.beds} beds</ListText>
         </ListItem>
@@ -79,7 +79,7 @@ export const FeaturesModal = ({ item }) => {
         {details?.airConditioner > 0 && (
           <ListItem>
             <IconFeatures>
-              <use xlinkHref={`${sprite}#conditioner`} />
+              <use xlinkHref={`${sprite}#airConditioner2`} />
             </IconFeatures>
             <ListText>air conditioner</ListText>
           </ListItem>
@@ -88,7 +88,7 @@ export const FeaturesModal = ({ item }) => {
         {details?.CD > 0 && (
           <ListItem>
             <IconFeatures>
-              <use xlinkHref={`${sprite}#cd`} />
+              <use xlinkHref={`${sprite}#CD`} />
             </IconFeatures>
             <ListText>CD</ListText>
           </ListItem>
