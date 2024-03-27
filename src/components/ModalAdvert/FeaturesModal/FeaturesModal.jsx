@@ -27,6 +27,15 @@ export const FeaturesModal = ({ item }) => {
     consumption,
   } = item;
 
+  const vehicleDetails = [
+    { name: 'Form', value: form },
+    { name: 'Length', value: length },
+    { name: 'Width', value: width },
+    { name: 'Height', value: height },
+    { name: 'Tank', value: tank },
+    { name: 'Consumption', value: consumption },
+  ];
+
   return (
     <ListWrapp>
       <ListFeatures>
@@ -36,6 +45,7 @@ export const FeaturesModal = ({ item }) => {
           </IconFeatures>
           <ListText>{adults} adults</ListText>
         </ListItem>
+
         {transmission === 'automatic' && (
           <ListItem>
             <IconFeatures width="20" height="20">
@@ -44,6 +54,7 @@ export const FeaturesModal = ({ item }) => {
             <ListText>Automatic</ListText>
           </ListItem>
         )}
+
         {engine === 'petrol' && (
           <ListItem>
             <IconFeatures>
@@ -52,6 +63,7 @@ export const FeaturesModal = ({ item }) => {
             <ListText>Petrol</ListText>
           </ListItem>
         )}
+
         {details.kitchen > 0 && (
           <ListItem>
             <IconFeatures>
@@ -60,12 +72,14 @@ export const FeaturesModal = ({ item }) => {
             <ListText>Kitchen</ListText>
           </ListItem>
         )}
-        <ListItem>
-          <IconFeatures>
-            <use href={`${sprite}#beds`} />
-          </IconFeatures>
-          <ListText>{details.beds} beds</ListText>
-        </ListItem>
+        {details.beds > 0 && (
+          <ListItem>
+            <IconFeatures>
+              <use href={`${sprite}#beds`} />
+            </IconFeatures>
+            <ListText>{details.beds} beds</ListText>
+          </ListItem>
+        )}
 
         {details?.airConditioner > 0 && (
           <ListItem>
@@ -160,30 +174,12 @@ export const FeaturesModal = ({ item }) => {
 
       <DetailsTitle>Vehicle details</DetailsTitle>
       <DetailsList>
-        <DetailsItem>
-          <FeaturesText>Form</FeaturesText>
-          <FeaturesText>{form}</FeaturesText>
-        </DetailsItem>
-        <DetailsItem>
-          <FeaturesText>Length</FeaturesText>
-          <FeaturesText>{length}</FeaturesText>
-        </DetailsItem>
-        <DetailsItem>
-          <FeaturesText>Width</FeaturesText>
-          <FeaturesText>{width}</FeaturesText>
-        </DetailsItem>
-        <DetailsItem>
-          <FeaturesText>Height</FeaturesText>
-          <FeaturesText>{height}</FeaturesText>
-        </DetailsItem>
-        <DetailsItem>
-          <FeaturesText>Tank</FeaturesText>
-          <FeaturesText>{tank}</FeaturesText>
-        </DetailsItem>
-        <DetailsItem>
-          <FeaturesText>Consumption</FeaturesText>
-          <FeaturesText>{consumption}</FeaturesText>
-        </DetailsItem>
+        {vehicleDetails.map((detail) => (
+          <DetailsItem key={detail.name}>
+            <FeaturesText>{detail.name}</FeaturesText>
+            <FeaturesText>{detail.value}</FeaturesText>
+          </DetailsItem>
+        ))}
       </DetailsList>
     </ListWrapp>
   );

@@ -127,4 +127,5 @@ export const IconCalendar = styled.svg`
   top: 50%;
   right: 18px;
   transform: translateY(-50%);
+  cursor: pointer;
 `;

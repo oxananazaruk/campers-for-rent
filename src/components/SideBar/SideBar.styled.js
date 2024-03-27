@@ -150,3 +150,5 @@ export const SearchBtn = styled.button`
     background-color: #d84343;
   }
 `;
+
+
