@@ -5,7 +5,7 @@ export const NavHeader = styled.header`
   top: 0;
   left: 0;
   position: sticky;
-  z-index: 1100;
+  z-index: 110;
   display: flex;
   min-height: 84px;
   padding: 24px;
@@ -41,8 +41,7 @@ export const StyledLink = styled(NavLink)`
   min-width: 132px;
   text-align: center;
   color: #fff;
-  border: none;
-  border-radius: 12px;
+  border-bottom: 1px solid transparent;
   transition:
     color 0.3s,
     border-bottom 0.3s;

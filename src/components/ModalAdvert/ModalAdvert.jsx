@@ -31,7 +31,7 @@ import { FormModal } from './FormModal/FormModal';
 const customStyles = {
   overlay: {
     backgroundColor: 'rgba(17, 18, 19, 0.4)',
-    zIndex: 100,
+    zIndex: 120,
   },
   content: {
     top: '50%',
