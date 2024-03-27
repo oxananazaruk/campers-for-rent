@@ -1,4 +1,4 @@
-import{u as o,a as p,j as e,r as l,b as $,f as F,c as A}from"./index-83dffdfe.js";import{n as h,s as T,A as E,F as w,a as I,b as B,c as x,d as V,e as W,f as P}from"./AdvertsCard-dbca6287.js";const M=h.div`
+import{u as o,a as p,j as e,r as l,b as $,f as F,c as A}from"./index-24d9e287.js";import{n as h,s as T,A as E,F as w,a as I,b as B,c as x,d as V,e as W,f as P}from"./AdvertsCard-ae612fcd.js";const M=h.div`
   width: 1280px;
   padding: 0 20px;
   margin: 0 auto;
@@ -21,7 +21,7 @@ import{u as o,a as p,j as e,r as l,b as $,f as F,c as A}from"./index-83dffdfe.js
   flex-direction: column;
   gap: 32px;
   margin-bottom: 50px;
-  padding-top: 100px;
+  padding-top: 50px;
 `,D=o.button`
   border: ${t=>t.theme.border.grey};
   border-radius: 200px;

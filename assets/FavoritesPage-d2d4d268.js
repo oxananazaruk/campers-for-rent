@@ -1,4 +1,4 @@
-import{u as n,j as e,a as r}from"./index-83dffdfe.js";import{A as i,n as o,g as a}from"./AdvertsCard-dbca6287.js";const d=n.div`
+import{u as n,j as e,a as r}from"./index-24d9e287.js";import{A as i,n as o,g as a}from"./AdvertsCard-ae612fcd.js";const d=n.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,5 +13,5 @@ import{u as n,j as e,a as r}from"./index-83dffdfe.js";import{A as i,n as o,g as 
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 50px;
 `,u=()=>{const t=r(a);return e.jsx(p,{children:t.length>0?e.jsx(c,{favorites:t}):e.jsx("h2",{children:"There are no favorite adverts yet... "})})};export{u as default};
