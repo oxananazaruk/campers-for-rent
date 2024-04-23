@@ -9,7 +9,7 @@ This application for a company that provides camper van rental services.
 The app will help travelers explore the Campers models and find their travel
 home that meets all the requirements and fulfills all their travel dreams.
 
-TThe application consists of 3 pages: the Home page, the Catalog and the page
+The application consists of 3 pages: the Home page, the Catalog and the page
 with ads selected as favorites.
 
 ## Home page

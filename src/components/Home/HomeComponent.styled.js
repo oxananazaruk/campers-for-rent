@@ -60,7 +60,7 @@ export const StyledLink = styled(Link)`
   letter-spacing: 0.01em;
   color: ${(p) => p.theme.color.blockFeatures};
   border: ${(p) => p.theme.border.red};
-  border-radius: 10px;
+  border-radius: 200px;
   padding: 17px 18px;
   margin-top: 50px;
 
