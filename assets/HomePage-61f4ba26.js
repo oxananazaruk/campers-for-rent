@@ -1,4 +1,4 @@
-import{u as o,L as r,j as e}from"./index-b4ee6983.js";const n="/campers-for-rent/assets/featured-min-ca34c45c.jpg",i=o.section`
+import{u as o,L as r,j as e}from"./index-bcfdd09d.js";const n="/campers-for-rent/assets/featured-min-ca34c45c.jpg",i=o.section`
   height: 100vh;
   width: 100%;
   padding-bottom: 44px;
@@ -46,7 +46,7 @@ import{u as o,L as r,j as e}from"./index-b4ee6983.js";const n="/campers-for-rent
   letter-spacing: 0.01em;
   color: ${t=>t.theme.color.blockFeatures};
   border: ${t=>t.theme.border.red};
-  border-radius: 10px;
+  border-radius: 200px;
   padding: 17px 18px;
   margin-top: 50px;
 
