@@ -31,14 +31,15 @@ export const AdvertsCard = ({ item }) => {
 
   const formatPrice = price.toFixed(2);
   const [isFavorite, setIsFavorite] = useState(false);
-  const favorites = useSelector(selectFavorites);
+  const favoritess = useSelector(selectFavorites);
   const [isModalOpen, setIsModal] = useState(false);
 
   useEffect(() => {
-    if (favorites.some((fav) => fav._id === item._id)) {
+    if (favoritess.some((fav) => fav._id === item._id)) {
       setIsFavorite(true);
     }
-  }, [favorites, item._id]);
+    return;
+  }, [favoritess, item._id]);
 
   const iconHeart = isFavorite ? 'heardPressed' : 'heartDefault';
 

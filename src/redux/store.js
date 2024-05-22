@@ -15,13 +15,13 @@ import { favoritesReducer } from './favoritesSlice';
 
 const rootReducer = combineReducers({
   adverts: advertsReducer,
-  favorites: favoritesReducer,
+  favoritess: favoritesReducer,
 });
 
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['favorites'],
+  whitelist: ['favoritess'],
 };
 
 const persistedRootReducer = persistReducer(persistConfig, rootReducer);
